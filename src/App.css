@@ -36,3 +36,25 @@
     transform: rotate(360deg);
   }
 }
+
+.img{
+  height:300px;
+  width:300px;
+  object-fit: cover;
+  
+  
+}
+.heading{
+  background-color: yellow;
+  color:black;
+  font-weight: bold;
+  height:40px;
+ 
+  
+}
+
+
+
+
+
+
