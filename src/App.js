@@ -1,13 +1,18 @@
 import "./App.css";
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
-import ButtonGroup from '@mui/material/ButtonGroup';
-import Switch from '@mui/material/Switch';
-import ToggleButton from '@mui/material/ToggleButton';
-import FormatAlignLeftIcon from '@mui/icons-material/FormatAlignLeft';
+import { Switch, Route, Link } from "react-router-dom";
+
+import{TicTacToe} from "./game";
 
 import { useState } from "react";
+import { MovieList } from "./MovieList";
+import{AddColor} from "./Addcolor.js"
+
 export default function App() {
+
+
+
   
   const movie_list = [
     {
@@ -71,12 +76,32 @@ export default function App() {
 
   return (
     <div className="App">
+    
 
-      <div className="head">
-        <h1 className="title">Add Top Rated Movies</h1>
-      </div>
-  
-      <div className="movie_form">
+<ul>
+
+        <li>
+          
+          <Link to="/movies" >Movies</Link>
+        </li>
+        <li>
+          <Link to="/colorgame">colorgame</Link>
+        </li>
+        <li>
+          <Link to="/game">TicTacToe</Link>
+        </li>
+       
+        
+        <li>
+          <Link to="/">Home</Link>
+        </li>
+       
+      
+      </ul>
+      <Switch>
+       
+        <Route path="/movies">
+        <div className="movie_form">
       <TextField id="outlined-basic"  label="Movie Name" variant="outlined"  onChange={(event) => setMovieName(event.target.value)}/>
      
       <TextField id="outlined-basic"  label="Movie Poster" variant="outlined"  onChange={(event) => setMoviePoster(event.target.value)}/>
@@ -85,97 +110,43 @@ export default function App() {
        
  <Button  variant="contained"  onClick={addMovie}>Add movie</Button>
  
-        
+ 
+ 
+ 
       </div>
       <MovieList movie_list={movies}></MovieList>
+        </Route>
+
+        <Route path="/colorgame">
+         <AddColor />
+        </Route>
+
+        <Route path="/game">
+          <TicTacToe/>
+        </Route>
+
+        <Route path="/">
+          <Home />
+        </Route>
+       
+       
+        </Switch>
+
+
+  
+     
+     
     
     </div>
   );
 }
-
-export function Counter() {
-  // const likes = 1;
-  const [like, setLike] = useState(0);
-  const [dislike, setDislike] = useState(0);
-  return (
-    <div className="counter-container">
-      <ButtonGroup disableElevation variant="contained">
-  <Button onClick={() => setLike(like + 1)}> <span role="img">👍</span>{like}</Button>
-  <Button onClick={() => setDislike(dislike + 1)}><span role="img">👎</span>{dislike} </Button>
-</ButtonGroup>
-
-
-    </div>
-  );
-}
-
-
-export function Movie({ name, pic, rating, description }) {
-  return (
-    <div className="movie-container">
-      <img src={pic} alt={name} className="movie-poster" />
-      <div className="movie-info">
-        <div className="movie-specs">
-          <h3>{name} </h3>
-          <p>
-            <span role="img" aria-label="star">
-              ⭐ {rating}
-            </span>
-          </p>
-        </div>
-        <Des description={description}/>
-        <Counter />
-      </div>
-    </div>
-  );
-}
-
-
- function MovieList(movie) {
-  return (
-    <section className="movie-list">
-      <div className="movie-list-container">
-        {movie.movie_list.map((el, index) => (
-          <Movie
-            key={index}
-            name={el.movie_name}
-            pic={el.poster}
-            rating={el.rating}
-            description={el.description}
-             
-            
-          />
-        ))}
-      </div>
-      
-    </section>
-  );
-}
-
-
-
-const user=[
-  {
-    poster:"https://www.pinkvilla.com/imageresize/jai_bhim_twiiter_review_1.jpg?width=752&format=webp&t=pvorg",
-    name:"Jai Bhim(2021)",
-    rating:"9.3",
-    description:"When a tribal man is arrested for a case of alleged theft, his wife turns to a lawer to help bring justice",
-    director:"T J Gnanavel",
-    stars:"Suriya,Lijo Mol Jose,Manikandan,Rajsha vijayan"
-  },
- 
-]
-const Des= ({description}) => {
-  const [showText, setShowText] = useState(false);
+function Home() {
   return (
     <div>
-        {/* <Button variant="contained"  className="button-toggle"  >   Description  </Button> */}
-        
-        <ToggleButton value="left" aria-label="left aligned"onClick={() => setShowText(!showText)}>
-        <FormatAlignLeftIcon />
-      </ToggleButton>
-      {showText && <p className="pfont"> {description} </p>}
-   
+    <h1>Welcome to movie app</h1>
+      {/* <TableComp /> */}
     </div>
   );
-};
+}
+
+
