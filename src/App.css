@@ -111,7 +111,7 @@ body{
   flex-wrap: wrap;
   width:492px;
   background-color: white ;
-  margin-bottom: 10px;
+  
 }
 
 .full-game{
@@ -136,4 +136,14 @@ body{
 
 .reset{
   width:100%
+}
+.movie-detailed-container{
+  max-width: 900px;
+  padding: 24px;
+}
+.movie-new{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }

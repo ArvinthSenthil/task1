@@ -5,7 +5,9 @@ import { Counter } from "./Counter";
 import { Des } from "./Des";
 
 
-export function Movie({ name, pic, rating, description }) {
+
+
+export function Movie({ name, pic, rating, description,deleteButton,id}) {
   return (
     <Card className="movie-container">
       <img src={pic} alt={name} className="movie-poster" />
@@ -19,9 +21,9 @@ export function Movie({ name, pic, rating, description }) {
               </span>
             </p>
           </div>
-          <Des description={description} />
+          <Des description={description} id={id}/>
           <CardActions>
-            <Counter />
+            <Counter /> {deleteButton}
           </CardActions>
         </div>
       </CardContent>
