@@ -1,19 +1,21 @@
 import { useState } from 'react';
+import Button from '@mui/material/Button';
+import TextField from '@mui/material/TextField';
 export function AddColor() {
 
 
     const [color, setColor] = useState("");
-    const styles = { backgroundColor: color };
+    
   
     const [colors, setColors] = useState(["orange", "yellow", "pink"]);
   
   
     return (
-      <div  >
-        <input style={styles} onChange={(e) => { setColor(e.target.value); }} placeholder="Enter a color" />
-  
-        <button onClick={() => setColors([...colors, color])}>  Add color  </button>
-  
+      <div className='Addcolor'>
+       
+        <TextField id="outlined-basic" placeholder="Enter a color" variant="outlined"  onChange={(e) => { setColor(e.target.value); }} />
+    
+        <Button variant="contained"  onClick={() => setColors([...colors, color])}>Add color</Button>
         <div className="ColorBox">
         {colors.map((x) => (<ColorBox y={x} />))}
         </div>

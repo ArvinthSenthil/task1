@@ -1,10 +1,13 @@
 
 import { useState } from "react";
 import Button from '@mui/material/Button';
+import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
+import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
 
 
 export function TicTacToe() {
   
+  const his=useHistory();
   const [board,setBoard]= useState ([null,null,null,null,null,null,null,null,null]);
 
   const decidewinner =(board) => {
@@ -40,6 +43,7 @@ export function TicTacToe() {
 
 
 
+
   const[isxturn,setisxturn] = useState(true);
 
   const handleclick=(index)=>{
@@ -50,18 +54,20 @@ export function TicTacToe() {
  
   }
  const btnstyle={
-  display:board[0]!==null ? "none" :"block"
+  display:board[0]||board[1]||board[2]||board[3]||board[4]||board[5]||board[6]||board[7]||board[8]!==null ? "none" :"block"
  }
 
 
     return(
-      <div className="full-game">
+      <div className="full-game" >
         <div className="topic">
           <h1>TicTacToe</h1>
         </div>
         <div style={btnstyle}>
-      <button onClick={()=>setisxturn(true)}>Player X </button>
-      <button onClick={()=>setisxturn(false)}>Player O</button>
+      
+          
+      <Button className="xturn" color="success"  onClick={()=>setisxturn(true)}>Player X </Button>
+      <Button className="yturn" color="error" onClick={()=>setisxturn(false)}>Player O</Button>
     </div> 
        
     
@@ -71,12 +77,14 @@ export function TicTacToe() {
   
         </div>
        
-       {winner ? <h2>winner is :{winner}</h2> : ""}
+       {winner ? <h2 className="winner">winner is :{winner}</h2> : ""}
       
-       {drawn ? <h2>match:{drawn}</h2> : ""}
+       {drawn ? <h2 className="draw">match:{drawn}</h2> : ""}
        
-      
+      <div className="Gamebutton">
        <Button  variant="contained" onClick={()=>setBoard([null,null,null,null,null,null,null,null,null])} >Reset</Button>
+       <Button onClick={()=>his.goBack()} variant="contained" startIcon={<ArrowBackIosIcon />}>back</Button>
+       </div>
         </div>   
     )
   
@@ -89,6 +97,7 @@ export function TicTacToe() {
    
     const styles ={
       color:val==="x"?"green" : "red",
+      
     }
     return(
     <div

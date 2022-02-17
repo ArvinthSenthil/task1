@@ -7,7 +7,7 @@ import { Des } from "./Des";
 
 
 
-export function Movie({ name, pic, rating, description,deleteButton,id}) {
+export function Movie({ name, pic, rating, description,deleteButton,id,editButton}) {
   return (
     <Card className="movie-container">
       <img src={pic} alt={name} className="movie-poster" />
@@ -23,10 +23,11 @@ export function Movie({ name, pic, rating, description,deleteButton,id}) {
           </div>
           <Des description={description} id={id}/>
           <CardActions>
-            <Counter /> {deleteButton}
+            <Counter /> {deleteButton} {editButton}
           </CardActions>
         </div>
       </CardContent>
     </Card>
+    
   );
 }

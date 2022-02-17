@@ -1,0 +1,46 @@
+    
+       
+    [
+        {
+        "id": "101",
+        "movie_name": "Jai Bhim(2021)",
+        "poster": "https://www.pinkvilla.com/imageresize/jai_bhim_twiiter_review_1.jpg?width=752&format=webp&t=pvorg",
+        "description": "When a tribal man is arrested for a case of alleged theft, his wife turns to a lawer to help bring justice",
+        "rating": 9.3,
+        "trailer": "https://www.youtube.com/embed/Gc6dEDnL8JA"
+    },
+    {
+        "id": "102",
+        "poster": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlUkQ340Bx1uqA13162eU9DV_E3gl2sLLUs9N-dnic1G41sQuwU6YAcT5Qdd1TAOsZTLQ&usqp=CAU",
+        "movie_name": "The Shawshank Redemption(1994)",
+        "rating": 9.3,
+        "description": "Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency",
+
+        "trailer": "https://www.youtube.com/embed/NmzuHjWmXOc"
+    },
+    {
+        "id": "103",
+        "trailer": "https://www.youtube.com/embed/sY1S34973zA",
+        "poster": "https://m.media-amazon.com/images/M/MV5BM2MyNjYxNmUtYTAwNi00MTYxLWJmNWYtYzZlODY3ZTk3OTFlXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_.jpg",
+        "movie_name": "The Godfather(1972)",
+        "rating": 9.2,
+        "description": "The aging patriarch of an organized crime dynasty in postwar Newyork city transfers control of his clandestine empire to his reluctant youngest son."
+    },
+    {
+        "id": "104",
+        "poster": "https://qph.fs.quoracdn.net/main-qimg-9e897497b05d7d1dd49bca31587ad034-pjlq",
+        "movie_name": "The Dark Knight(2008)",
+        "rating": 9.0,
+        "description": "When the menace known as the joker wreaks havoc and chaos on the people of Gotham, Batman must accept one of his ability to fight injustice.",
+        "trailer": "https://youtube.com/Q63qjIXMqwU"
+    },
+    {
+        "id": "105",
+        "poster": "https://m.media-amazon.com/images/M/MV5BMWMwMGQzZTItY2JlNC00OWZiLWIyMDctNDk2ZDQ2YjRjMWQ0XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_.jpg",
+        "movie_name": "The Godfather part 2(1974)",
+        "rating": 9.0,
+        "description": "The early life of Vito coreleone in 1920s newyork city is portrayed,While his son,Michael expands his grip on the family.",
+        "trailer": "https://www.youtube.com/embed/9O1Iy9od7-A"
+    }
+    ]
+
