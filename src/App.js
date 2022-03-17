@@ -22,7 +22,7 @@ import Tooltip from '@mui/material/Tooltip';
 
 
 import { Moviedetails } from "./Moviedetails";
-import { BasicForm } from "./BasicForm";
+
 
 
 
@@ -103,9 +103,10 @@ export default function App() {
 
         <Route exact path="/">
           <Home />
-          <BasicForm/>
+         
          
         </Route>
+
 
        <Route path="**">
        <Notfound /> 
@@ -126,6 +127,4 @@ export default function App() {
   );
 }
 
-function Hi(){
-  return <div>Hi</div>
-}
+

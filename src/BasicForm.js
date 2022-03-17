@@ -38,7 +38,7 @@ export function BasicForm() {
           type="password"
           minLength="8"
           placeholder="password"
-        />{" "}
+        />
         {formik.touched.password && formik.errors.password ? formik.errors.password : ""}
         <br />
         <button type="submit">submit</button>
